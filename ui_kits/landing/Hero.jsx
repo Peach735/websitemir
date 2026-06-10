@@ -3,7 +3,7 @@ function Hero({ phone }) {
   const call = () => { window.location.href = 'tel:' + phone.replace(/\s/g, ''); };
   return (
     <section className="hero">
-      <img className="hero__watermark" src="../../assets/logomark.png" alt="" aria-hidden="true" />
+      <img className="hero__watermark" src="../../assets/logo.svg" alt="" aria-hidden="true" />
       <div className="container hero__grid">
         <div className="hero__main">
           <span className="eyebrow">Представительство иностранных производителей · Беларусь и Россия</span>

@@ -1655,7 +1655,7 @@ function CtaBand({
     className: "ctaband"
   }, /*#__PURE__*/React.createElement("img", {
     className: "ctaband__watermark",
-    src: "../../assets/logomark.png",
+    src: "../../assets/logo.svg",
     alt: "",
     "aria-hidden": "true"
   }), /*#__PURE__*/React.createElement("div", {
@@ -1730,7 +1730,7 @@ function Footer({
     className: "footer__brand"
   }, /*#__PURE__*/React.createElement("img", {
     className: "brand-mark brand-mark--light",
-    src: "../../assets/logomark.png",
+    src: "../../assets/logo.svg",
     alt: "\u041C\u0418\u0420\u0410\u0421\u0410"
   }), /*#__PURE__*/React.createElement("span", {
     className: "footer__copy"
@@ -1816,7 +1816,7 @@ function Header({
     })
   }, /*#__PURE__*/React.createElement("img", {
     className: "brand-mark",
-    src: "../../assets/logomark.png",
+    src: "../../assets/logo.svg",
     alt: "\u041C\u0418\u0420\u0410\u0421\u0410"
   })), /*#__PURE__*/React.createElement("div", {
     className: "header__right"
@@ -1849,7 +1849,7 @@ function Hero({
     className: "hero"
   }, /*#__PURE__*/React.createElement("img", {
     className: "hero__watermark",
-    src: "../../assets/logomark.png",
+    src: "../../assets/logo.svg",
     alt: "",
     "aria-hidden": "true"
   }), /*#__PURE__*/React.createElement("div", {

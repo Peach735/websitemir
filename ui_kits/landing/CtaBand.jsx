@@ -3,7 +3,7 @@ function CtaBand({ phone }) {
   const call = () => { window.location.href = 'tel:' + phone.replace(/\s/g, ''); };
   return (
     <section className="ctaband">
-      <img className="ctaband__watermark" src="../../assets/logomark.png" alt="" aria-hidden="true" />
+      <img className="ctaband__watermark" src="../../assets/logo.svg" alt="" aria-hidden="true" />
       <div className="container ctaband__inner">
         <div>
           <h2>Обсудим выход вашей продукции на рынки Беларуси и России</h2>

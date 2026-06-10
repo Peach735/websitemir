@@ -145,7 +145,7 @@ If imagery is ever introduced, it should be cool-toned, restrained, documentary
 - **Unicode as icon:** only `→` (deal-cycle arrows) and `·` (value separators)
   are used as structural glyphs.
 - **Logo:** the brand currently uses a **standalone logomark** — a stylized
-  letter **«М» formed by a handshake** (`assets/logomark.png`), recolored to
+  letter **«М» formed by a handshake** (`assets/logo.svg`), recolored to
   brand navy `--navy-900`. Per the owner's direction the separate «МИРАСА» text
   wordmark is **not shown beside the mark for now** (the mark stands alone in
   the header and footer). The mark was supplied as a **draft (raster)** — treat

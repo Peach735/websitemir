@@ -4,7 +4,7 @@ function Footer({ phone }) {
     <footer className="footer">
       <div className="container footer__inner">
         <div className="footer__brand">
-          <img className="brand-mark brand-mark--light" src="../../assets/logomark.png" alt="МИРАСА" />
+          <img className="brand-mark brand-mark--light" src="../../assets/logo.svg" alt="МИРАСА" />
           <span className="footer__copy">экспертиза без границ</span>
         </div>
         <a className="footer__phone" href={'tel:' + phone.replace(/\s/g, '')}>{phone}</a>

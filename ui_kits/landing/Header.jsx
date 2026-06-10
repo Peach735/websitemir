@@ -11,7 +11,7 @@ function Header({ phone }) {
     <header className={'header' + (scrolled ? ' header--scrolled' : '')}>
       <div className="container header__inner">
         <span className="brand-lockup" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <img className="brand-mark" src="../../assets/logomark.png" alt="МИРАСА" />
+          <img className="brand-mark" src="../../assets/logo.svg" alt="МИРАСА" />
         </span>
         <div className="header__right">
           <div className="header__phone">
