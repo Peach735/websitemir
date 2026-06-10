@@ -1,0 +1,168 @@
+/* ============================================================
+   МИРАСА — Design Tokens
+   Colors + Typography foundations and semantic styles.
+   Business consulting brand. Industrial, trustworthy, calm.
+   ============================================================ */
+
+/* Manrope — clean geometric grotesque with full Cyrillic support.
+   Substitution note: brand spec said "Inter / Manrope". Manrope chosen
+   as primary for a slightly warmer, less-overused grotesque. Loaded from
+   Google Fonts CDN (no licensed brand font files were provided). */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* ---------- BRAND / PRIMARY ---------- */
+  --navy-900: #1A237E;   /* wordmark, deepest brand ink */
+  --navy-800: #1E3A8A;   /* primary actions, links */
+  --navy-700: #2547B0;   /* hover for primary */
+  --navy-600: #2E5BD8;   /* bright royal accent (sparingly) */
+  --navy-050: #EEF2FB;   /* tinted brand surface */
+
+  /* ---------- NEUTRALS ---------- */
+  --ink-900: #1E2530;    /* primary text — dark slate, NOT pure black */
+  --ink-700: #3B4453;    /* strong secondary text */
+  --ink-500: #5B6473;    /* secondary text, captions */
+  --ink-400: #8A93A3;    /* muted, placeholder */
+  --line-300: #D8DEE8;   /* borders, dividers */
+  --line-200: #E6EBF2;   /* subtle borders */
+
+  /* ---------- SURFACES ---------- */
+  --surface-0: #FFFFFF;  /* base white */
+  --surface-1: #F5F7FA;  /* light grey-blue page tint */
+  --surface-2: #EEF1F6;  /* slightly deeper section tint */
+
+  /* ---------- SEMANTIC ---------- */
+  --fg1: var(--ink-900);     /* primary foreground */
+  --fg2: var(--ink-500);     /* secondary foreground */
+  --fg3: var(--ink-400);     /* tertiary / muted */
+  --bg1: var(--surface-0);
+  --bg2: var(--surface-1);
+  --brand: var(--navy-900);
+  --action: var(--navy-800);
+  --action-hover: var(--navy-700);
+  --on-action: #FFFFFF;
+  --link: var(--navy-800);
+
+  /* ---------- TYPE ---------- */
+  --font-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Type scale (1.250 major-third-ish, tuned for landing) */
+  --text-xs:   0.8125rem;  /* 13px */
+  --text-sm:   0.9375rem;  /* 15px */
+  --text-base: 1.0625rem;  /* 17px */
+  --text-lg:   1.25rem;    /* 20px */
+  --text-xl:   1.5rem;     /* 24px */
+  --text-2xl:  2rem;       /* 32px */
+  --text-3xl:  2.75rem;    /* 44px */
+  --text-4xl:  3.75rem;    /* 60px */
+  --text-5xl:  4.75rem;    /* 76px */
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.6;
+
+  --tracking-tight: -0.02em;
+  --tracking-snug: -0.01em;
+  --tracking-wide: 0.08em;
+
+  /* ---------- SPACING (8pt base) ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* ---------- RADII (minimal) ---------- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  /* ---------- SHADOWS (delicate) ---------- */
+  --shadow-sm: 0 1px 2px rgba(26, 35, 126, 0.05);
+  --shadow-md: 0 4px 16px rgba(26, 35, 126, 0.07);
+  --shadow-lg: 0 12px 36px rgba(26, 35, 126, 0.10);
+
+  /* ---------- LAYOUT ---------- */
+  --container: 1160px;
+  --container-narrow: 880px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES
+   ============================================================ */
+.h-display {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.h1 {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: var(--text-4xl);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-3xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg1);
+}
+.h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-snug);
+  color: var(--fg1);
+}
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--text-xs);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--action);
+}
+.lead {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+  color: var(--fg2);
+}
+.body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--ink-700);
+}
+.small {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  line-height: 1.5;
+  color: var(--fg2);
+}
+.caption {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  color: var(--fg3);
+}

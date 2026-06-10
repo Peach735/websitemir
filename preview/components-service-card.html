@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 26px;background:var(--surface-1);}
+  .svc{background:#fff;border:1px solid var(--line-300);border-radius:8px;padding:20px 22px;max-width:540px;}
+  .hd{display:flex;align-items:center;gap:14px;}
+  .ic{width:42px;height:42px;border-radius:7px;background:var(--navy-050);display:flex;align-items:center;justify-content:center;color:var(--action);}
+  .ic svg{width:22px;height:22px;}
+  .ti{font-size:19px;font-weight:700;color:var(--fg1);flex:1;}
+  .chev{color:var(--ink-400);}
+  .body-txt{font-size:14px;color:var(--ink-700);line-height:1.55;margin:14px 0 0;padding-top:14px;border-top:1px solid var(--line-200);}
+</style></head>
+<body>
+  <p class="card-label">Service card · accordion (open)</p>
+  <div class="svc">
+    <div class="hd">
+      <span class="ic"><i data-lucide="compass"></i></span>
+      <span class="ti">Выход на рынок</span>
+      <span class="chev"><i data-lucide="chevron-up"></i></span>
+    </div>
+    <p class="body-txt">Оценка перспектив · анализ конкурентов · сертификация и документация · стратегия · коммерческие предложения.</p>
+  </div>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+</body></html>

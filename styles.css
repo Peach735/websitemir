@@ -1,0 +1,7 @@
+/* ============================================================
+   МИРАСА Design System — entry point
+   Consumers link this one file to get all design tokens
+   and typographic foundations.
+   ============================================================ */
+
+@import './colors_and_type.css';
