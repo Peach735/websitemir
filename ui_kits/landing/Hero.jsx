@@ -26,7 +26,7 @@ function Hero({ phone }) {
           <ul className="hero__facts">
             <li><span className="num">18+</span><span className="txt">лет в закупках металлопродукции</span></li>
             <li><span className="num">МАЗ</span><span className="txt">взгляд изнутри тендерных комиссий и контроля качества</span></li>
-            <li><span className="num">БУТБ</span><span className="txt">тендеры, госзакупки и биржевые торги</span></li>
+            <li><span className="num">БУТБ</span><span className="txt">тендеры, брокерские услуги, госзакупки и биржевые торги</span></li>
           </ul>
         </aside>
       </div>
