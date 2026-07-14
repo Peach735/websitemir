@@ -1,12 +1,25 @@
-// app-print.jsx — static print build (no Tweaks, fixed settings) for PDF export
+import React from 'react';
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import Empathy from './components/Empathy.jsx';
+import Guide from './components/Guide.jsx';
+import Services from './components/Services.jsx';
+import CtaBand from './components/CtaBand.jsx';
+import Purpose from './components/Purpose.jsx';
+import Expect from './components/Expect.jsx';
+import Process from './components/Process.jsx';
+import Formats from './components/Formats.jsx';
+import Values from './components/Values.jsx';
+import Contacts from './components/Contacts.jsx';
+import Footer from './components/Footer.jsx';
+
 const PHONE = '+375 (29) 123-45-67';
 const EMAIL = 'info@mirasa.by';
 const MESSENGER = '@mirasa';
 
-function PrintApp() {
-  React.useEffect(() => { if (window.lucide) window.lucide.createIcons(); });
+export default function App() {
   return (
-    <React.Fragment>
+    <>
       <Header phone={PHONE} />
       <div className="page" data-density="comfortable" data-images="on" data-bridge="on">
         <main>
@@ -26,19 +39,6 @@ function PrintApp() {
         </main>
         <Footer phone={PHONE} />
       </div>
-    </React.Fragment>
+    </>
   );
 }
-
-ReactDOM.createRoot(document.getElementById('root')).render(<PrintApp />);
-
-// Auto-print once React has mounted and fonts are ready.
-(function autoPrint() {
-  const ready = () => document.querySelector('#root .page');
-  const go = () => {
-    const fonts = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
-    fonts.then(() => setTimeout(() => window.print(), 600));
-  };
-  const wait = () => ready() ? go() : setTimeout(wait, 100);
-  wait();
-})();

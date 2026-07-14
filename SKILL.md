@@ -11,7 +11,7 @@ Key files:
 - `colors_and_type.css` — all design tokens (color, type scale, semantic classes, spacing, radii, shadows).
 - `assets/wordmark.svg` — «МИРАСА» text logo lockup.
 - `preview/` — design-system reference cards.
-- `ui_kits/landing/` — the canonical landing page (React/JSX + `landing.css`).
+- `src/` — the canonical landing page, a normal Vite + React project (`npm install && npm run dev`).
 
 If creating visual artifacts (slides, mocks, throwaway prototypes, etc), copy
 assets out and create static HTML files for the user to view. If working on

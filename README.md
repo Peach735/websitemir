@@ -163,9 +163,19 @@ If imagery is ever introduced, it should be cool-toned, restrained, documentary
 | `SKILL.md` | Agent Skill manifest — makes this system usable as a downloadable Claude skill. |
 | `assets/` | Brand assets: `wordmark.svg` (text logo lockup). |
 | `preview/` | Design-system cards (colors, type, spacing, components, brand) shown in the Design System tab. |
-| `ui_kits/landing/` | The landing-page UI kit: `index.html` (interactive full page) + JSX components. |
+| `src/` | The production landing site — Vite + React. See "Running the site" below. |
 
-### UI kits
-- **`ui_kits/landing/`** — the МИРАСА single-page corporate site: sticky header
-  with phone CTA, hero, about, services (4 accordion cards), full deal-cycle
-  ribbon, industries, principles/values, cooperation formats, contacts.
+### The production site
+The МИРАСА single-page corporate site — sticky header with phone CTA, hero
+("bridge" storytelling variant), services, deal process, values, cooperation
+formats, contacts — lives in `src/` as a normal Vite + React project (see root
+`package.json`), not as a standalone prototype.
+
+## Running the site
+
+```
+npm install
+npm run dev      # local dev server
+npm run build    # production build to dist/
+npm run preview  # preview the production build
+```
