@@ -25,7 +25,7 @@ export default function Guide({ phone }) {
         <div className="guide__metrics">
           <div className="metric"><div className="num">18+</div><div className="lbl">лет в закупках металлопродукции</div></div>
           <div className="metric"><div className="num">МАЗ</div><div className="lbl">опыт внутри крупнейшего машзавода Беларуси</div></div>
-          <div className="metric"><div className="num">БУТБ</div><div className="lbl">тендеры, госзакупки и биржевые торги</div></div>
+          <div className="metric"><div className="num">Тендер</div><div className="lbl">тендеры, госзакупки и биржевые торги</div></div>
           <div className="metric"><div className="num">2 рынка</div><div className="lbl">Беларусь и Россия — локальное присутствие</div></div>
         </div>
       </div>
