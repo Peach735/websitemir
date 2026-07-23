@@ -2,10 +2,10 @@ import React from 'react';
 import Icon from './Icon.jsx';
 
 const EXPECT = [
-  { icon: 'eye', t: 'Взгляд заказчика изнутри' },
-  { icon: 'route', t: 'Сопровождение полного цикла' },
-  { icon: 'shield-check', t: 'Контроль до получения оплаты' },
-  { icon: 'lock', t: 'Полная конфиденциальность' },
+  { icon: 'eye', t: 'Экспертизу закупок и принятия решений' },
+  { icon: 'route', t: 'Полное сопровождение сделки от рынка до контракта' },
+  { icon: 'shield-check', t: 'Контроль исполнения и оплаты' },
+  { icon: 'lock', t: 'Конфиденциальность на всех этапах' },
 ];
 
 export default function Expect() {
@@ -14,7 +14,7 @@ export default function Expect() {
       <div className="container">
         <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">Что вы получаете</span></div>
-          <h2 className="h2">С нами на вашей стороне</h2>
+          <h2 className="h2">С МИРАСА на вашей стороне</h2>
         </div>
         <div className="expect__grid">
           {EXPECT.map((e) => (
