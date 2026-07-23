@@ -8,25 +8,23 @@ export default function Guide({ phone }) {
       <div className="container guide__grid">
         <div className="guide__body">
           <div className="section-head" style={{ marginBottom: 0 }}>
-            <div className="eyebrow-row"><span className="eyebrow">Почему мост — это мы</span></div>
-            <h2 className="h2">Мы знаем требования заказчика изнутри</h2>
+            <div className="eyebrow-row"><span className="eyebrow">Почему МИРАСА — ваш мост на рынок</span></div>
+            <h2 className="h2">Вы строите производство. Мы помогаем выстроить путь к заказчику</h2>
           </div>
-          <p className="lead">С нами вы переходите на новый рынок по готовому мосту —
-            а не строите его в одиночку.</p>
-          <p className="body">Основатель компании более 18 лет работал в закупках
-            металлопродукции на МАЗ — одном из крупнейших машиностроительных
-            предприятий Беларуси. Это редкое преимущество: взгляд изнутри
-            закупочных служб, тендерных комиссий и контроля качества.</p>
+          <p className="lead">МИРАСА обеспечивает локальное представительство производителей на рынках Беларуси и России, 
+            сопровождая проекты от первого контакта до исполнения контракта и получения оплаты.</p>
+          <p className="body">Наш опыт в сфере промышленных закупок позволяет понимать требования заказчиков, 
+            особенности тендерных процедур и факторы, влияющие на принятие решений о закупках.</p>
 
           <a className="btn btn-primary btn-lg" href={tel(phone)} style={{ marginTop: 8 }}>
             <Icon name="phone" />Обсудить ваш случай
           </a>
         </div>
         <div className="guide__metrics">
-          <div className="metric"><div className="num">18+</div><div className="lbl">лет в закупках металлопродукции</div></div>
-          <div className="metric"><div className="num">МАЗ</div><div className="lbl">опыт внутри крупнейшего машзавода Беларуси</div></div>
-          <div className="metric"><div className="num">Тендер</div><div className="lbl">тендеры, госзакупки и биржевые торги</div></div>
-          <div className="metric"><div className="num">2 рынка</div><div className="lbl">Беларусь и Россия — локальное присутствие</div></div>
+          <div className="metric"><div className="num">18+</div><div className="lbl">лет практической экспертизы</div></div>
+          <div className="metric"><div className="num">Беларусь и Россия</div><div className="lbl">локальное присутствие и сопровождение проектов</div></div>
+          <div className="metric"><div className="num">Тендеры и биржевые торги</div><div className="lbl">сопровождение закупочных процедур и коммерческих сделок</div></div>
+          <div className="metric"><div className="num">До результата</div><div className="lbl">контроль исполнения обязательств и расчетов по контракту</div></div>
         </div>
       </div>
     </section>
