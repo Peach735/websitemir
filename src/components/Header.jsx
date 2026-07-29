@@ -1,9 +1,8 @@
 import React from 'react';
 import Icon from './Icon.jsx';
-import { tel } from './common.jsx';
 import logo from '../../assets/logo.svg';
 
-export default function Header({ phone }) {
+export default function Header({ phone, email }) {
   const [scrolled, setScrolled] = React.useState(false);
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -27,8 +26,8 @@ export default function Header({ phone }) {
             <span className="k">Звоните</span>
             <span className="v">{phone}</span>
           </div>
-          <a className="btn btn-primary" href={tel(phone)}>
-            <Icon name="phone" />Позвонить
+          <a className="btn btn-primary" href={'mailto:' + email}>
+            <Icon name="mail" />Запросить консультацию
           </a>
         </div>
       </div>

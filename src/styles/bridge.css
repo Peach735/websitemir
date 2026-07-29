@@ -225,6 +225,8 @@ a { color: var(--link); text-decoration: none; }
 .guide__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 60px; align-items: center; }
 .guide__body .lead { margin: 18px 0 24px; }
 .guide__body p { margin: 0 0 16px; }
+.guide__why { margin: 8px 0 24px; padding-top: 20px; border-top: 1px solid var(--line-300); }
+.guide__why h3 { margin: 0 0 12px; font-size: 18px; font-weight: 700; color: var(--fg1); }
 .guide__metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line-300); border: 1px solid var(--line-300); border-radius: var(--radius-lg); overflow: hidden; }
 .metric { background: #fff; padding: 26px 24px; }
 .metric .num { font-size: 38px; font-weight: 800; color: var(--navy-900); line-height: 1; letter-spacing: -0.02em; }
@@ -293,6 +295,12 @@ a { color: var(--link); text-decoration: none; }
 .value h3 { margin: 6px 0 4px; font-size: 20px; font-weight: 700; color: var(--fg1); }
 .value p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--ink-500); }
 
+/* ---------- Geography & industries ---------- */
+.geo__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.geo__block .eyebrow-row { margin-bottom: 14px; }
+.geo__tags { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 17px; font-weight: 700; color: var(--navy-800); }
+.geo__tags .dot { color: var(--ink-400); font-weight: 800; }
+
 /* ---------- CTA refrain band ---------- */
 .ctaband { background: var(--navy-900); color: #fff; position: relative; overflow: hidden; }
 .ctaband__watermark { position: absolute; top: 50%; right: -50px; transform: translateY(-50%); height: 340px; opacity: 0.06; filter: brightness(0) invert(1); pointer-events: none; }
@@ -326,7 +334,7 @@ a { color: var(--link); text-decoration: none; }
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
   .header__nav { display: none; }
-  .hero-a .hero__grid, .empathy__grid, .guide__grid, .svcrow, .contacts__inner { grid-template-columns: 1fr; gap: 36px; }
+  .hero-a .hero__grid, .empathy__grid, .guide__grid, .svcrow, .contacts__inner, .geo__grid { grid-template-columns: 1fr; gap: 36px; }
   .svcrow--flip .svcrow__media { order: 0; }
   .expect__grid, .proc__grid { grid-template-columns: 1fr 1fr; }
   .values__grid, .fmt-grid { grid-template-columns: 1fr; }

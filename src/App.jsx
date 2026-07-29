@@ -10,32 +10,37 @@ import Expect from './components/Expect.jsx';
 import Process from './components/Process.jsx';
 import Formats from './components/Formats.jsx';
 import Values from './components/Values.jsx';
+import WhoNotFor from './components/WhoNotFor.jsx';
+import GeoIndustries from './components/GeoIndustries.jsx';
 import Contacts from './components/Contacts.jsx';
 import Footer from './components/Footer.jsx';
 
 const PHONE = '+375 (29) 123-45-67';
 const EMAIL = 'info@mirasa.by';
 const MESSENGER = '@mirasa';
+const WECHAT = '@mirasa';
 
 export default function App() {
   return (
     <>
-      <Header phone={PHONE} />
+      <Header phone={PHONE} email={EMAIL} />
       <div className="page" data-density="comfortable" data-images="on" data-bridge="on">
         <main>
-          <Hero phone={PHONE} variant="A" />
+          <Hero phone={PHONE} email={EMAIL} variant="A" />
           <Empathy />
-          <Guide phone={PHONE} />
           <Services />
-          <CtaBand phone={PHONE}
+          <CtaBand email={EMAIL}
             title="Обсудим выход вашей продукции на рынки Беларуси и России"
-            text="Один звонок — и вы получите профессиональную оценку возможностей, рисков и дальнейших шагов." />
-          <Purpose />
-          <Expect />
+            text="Одна консультация — и вы получите профессиональную оценку возможностей, рисков и дальнейших шагов." />
           <Process />
           <Formats />
+          <Expect />
+          <Guide email={EMAIL} />
+          <Purpose />
           <Values />
-          <Contacts phone={PHONE} email={EMAIL} messenger={MESSENGER} />
+          <WhoNotFor />
+          <GeoIndustries />
+          <Contacts phone={PHONE} email={EMAIL} messenger={MESSENGER} wechat={WECHAT} />
         </main>
         <Footer phone={PHONE} />
       </div>

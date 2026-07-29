@@ -1,8 +1,7 @@
 import React from 'react';
 import Icon from './Icon.jsx';
-import { tel } from './common.jsx';
 
-export default function Guide({ phone }) {
+export default function Guide({ email }) {
   return (
     <section className="section section--tint" id="about">
       <div className="container guide__grid">
@@ -13,11 +12,19 @@ export default function Guide({ phone }) {
           </div>
           <p className="lead">МИРАСА обеспечивает локальное представительство производителей на рынках Беларуси и России, 
             сопровождая проекты от первого контакта до исполнения контракта и получения оплаты.</p>
-          <p className="body">Наш опыт в сфере промышленных закупок позволяет понимать требования заказчиков, 
+          <p className="body">Наш опыт в сфере промышленных закупок позволяет понимать требования заказчиков,
             особенности тендерных процедур и факторы, влияющие на принятие решений о закупках.</p>
 
-          <a className="btn btn-primary btn-lg" href={tel(phone)} style={{ marginTop: 8 }}>
-            <Icon name="phone" />Обсудить ваш случай
+          <div className="guide__why">
+            <h3>Почему это работает</h3>
+            <p className="body">Мы понимаем, как принимаются решения о закупках: требования технических служб,
+              логика тендерных комиссий и критерии выбора поставщиков.</p>
+            <p className="body">Это позволяет заранее учитывать реальные факторы, влияющие на допуск продукции,
+              победу в закупке и успешное исполнение контракта.</p>
+          </div>
+
+          <a className="btn btn-primary btn-lg" href={'mailto:' + email} style={{ marginTop: 8 }}>
+            <Icon name="mail" />Запросить консультацию
           </a>
         </div>
         <div className="guide__metrics">

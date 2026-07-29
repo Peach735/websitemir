@@ -2,10 +2,9 @@ import React from 'react';
 import Icon from './Icon.jsx';
 import { tel, Ph, Bridge, Refrain } from './common.jsx';
 import logo from '../../assets/logo.svg';
-import heroProduction from '../../assets/photos/hero-production.jpg';
 import heroLogistics from '../../assets/photos/hero-logistics.jpg';
 
-export default function Hero({ phone, variant }) {
+export default function Hero({ phone, email, variant }) {
   const eyebrow = (
     <div className="eyebrow-row"><span className="eyebrow">Представительство иностранных производителей · Беларусь и Россия</span></div>
   );
@@ -22,7 +21,7 @@ export default function Hero({ phone, variant }) {
   );
   const cta = (
     <div className="hero__cta">
-      <a className="btn btn-primary btn-lg" href={tel(phone)}><Icon name="phone" />Позвонить</a>
+      <a className="btn btn-primary btn-lg" href={'mailto:' + email}><Icon name="mail" />Запросить консультацию</a>
       <a className="callrow" href={tel(phone)}><Icon name="phone-call" />{phone}</a>
     </div>
   );
@@ -41,8 +40,7 @@ export default function Hero({ phone, variant }) {
         <div className="container hero__bridge-wrap"><Bridge /></div>
         <div className="container hero__wide">
           <Ph
-            label="фото · продукция в цехе производителя"
-            src={heroProduction} />
+            label="фото · продукция в цехе производителя" />
         </div>
       </section>
     );
