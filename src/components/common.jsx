@@ -47,14 +47,12 @@ export function Bridge({ vertical }) {
 
 const REFRAIN = ['Уверенно', 'Прозрачно', 'До результата'];
 
+// Separators via CSS ::after — see .hero__refrain in bridge.css.
 export function Refrain({ className }) {
   return (
     <div className={className}>
-      {REFRAIN.map((w, i) => (
-        <React.Fragment key={w}>
-          {i > 0 && <span className="dot">·</span>}
-          <span>{w}</span>
-        </React.Fragment>
+      {REFRAIN.map((w) => (
+        <span key={w}>{w}</span>
       ))}
     </div>
   );

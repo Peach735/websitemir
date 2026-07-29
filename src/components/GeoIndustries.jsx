@@ -3,14 +3,13 @@ import React from 'react';
 const GEO = ['Беларусь', 'Россия', 'локальное сопровождение на месте'];
 const INDUSTRIES = ['Металлопродукция', 'машиностроение', 'промышленное оборудование', 'комплектующие', 'сырьевые поставки'];
 
+// Separators come from CSS ::after so they stay glued to their word instead of
+// dangling alone at the end of a wrapped line.
 function TagRow({ items }) {
   return (
     <div className="geo__tags">
-      {items.map((it, i) => (
-        <React.Fragment key={it}>
-          {i > 0 && <span className="dot">·</span>}
-          <span>{it}</span>
-        </React.Fragment>
+      {items.map((it) => (
+        <span key={it}>{it}</span>
       ))}
     </div>
   );

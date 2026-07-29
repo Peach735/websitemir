@@ -41,9 +41,12 @@ section[id] { scroll-margin-top: 90px; }
 .page .h2 { font-size: clamp(26px, 5.2vw, 44px); }
 .page h1, .page .h2, .page h3, .page h4 { overflow-wrap: break-word; }
 
-/* Grid children must be allowed to shrink below their min-content width. */
+/* Grid children must be allowed to shrink below their min-content width,
+   otherwise one long word ("Конфиденциальность") widens the whole track. */
 .empathy__grid > *, .guide__grid > *, .svcrow > *,
-.contacts__inner > *, .geo__grid > *, .hero-a .hero__grid > * { min-width: 0; }
+.contacts__inner > *, .geo__grid > *, .hero-a .hero__grid > *,
+.values__grid > *, .fmt-grid > *, .expect__grid > *, .proc__grid > *,
+.guide__metrics > * { min-width: 0; }
 .section--tint { background: var(--surface-1); }
 .section--tint2 { background: var(--surface-2); }
 
@@ -98,7 +101,7 @@ a { color: var(--link); text-decoration: none; }
    keeping targets at the WCAG 2.5.8 minimum without shifting the layout. */
 .header__nav a { font-size: 15px; font-weight: 600; color: var(--ink-700); padding: 8px 0; }
 .header__nav a:hover { color: var(--navy-800); }
-.header__right { display: flex; align-items: center; gap: 20px; }
+.header__right { display: flex; align-items: center; gap: 20px; min-width: 0; }
 .header__phone { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
 .header__phone .k { font-size: 11px; font-weight: 600; letter-spacing: .04em; color: var(--fg2); text-transform: uppercase; }
 .header__phone .v { font-size: 16px; font-weight: 800; color: var(--navy-900); }
@@ -216,7 +219,7 @@ a { color: var(--link); text-decoration: none; }
 .hero__cta { margin-top: 36px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .hero__refrain { margin-top: 28px; display: flex; gap: 10px 18px; flex-wrap: wrap; align-items: center; }
 .hero__refrain span { font-size: 14px; font-weight: 700; color: var(--navy-800); letter-spacing: .01em; }
-.hero__refrain .dot { color: var(--ink-500); font-weight: 800; }
+.hero__refrain span:not(:last-child)::after { content: "\00a0·"; color: var(--ink-500); }
 
 /* Variant A — split */
 .hero-a .hero__grid { position: relative; display: grid; grid-template-columns: 1.35fr 1fr; gap: 56px; align-items: stretch; }
@@ -280,8 +283,11 @@ a { color: var(--link); text-decoration: none; }
 .guide__why { margin: 8px 0 24px; padding-top: 20px; border-top: 1px solid var(--line-300); }
 .guide__why h3 { margin: 0 0 12px; font-size: 18px; font-weight: 700; color: var(--fg1); }
 .guide__metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line-300); border: 1px solid var(--line-300); border-radius: var(--radius-lg); overflow: hidden; }
-.metric { background: #fff; padding: 26px 24px; }
-.metric .num { font-size: 38px; font-weight: 800; color: var(--navy-900); line-height: 1; letter-spacing: -0.02em; }
+.metric { background: #fff; padding: 26px 24px; min-width: 0; }
+/* Two of these "numbers" are phrases ("Тендеры и биржевые торги"), so a fixed
+   38px sets a min-content floor wider than a phone and overflow:hidden would
+   silently clip the second column. */
+.metric .num { font-size: clamp(24px, 3vw, 38px); font-weight: 800; color: var(--navy-900); line-height: 1.05; letter-spacing: -0.02em; overflow-wrap: break-word; }
 .metric .lbl { margin-top: 10px; font-size: 14px; font-weight: 500; color: var(--ink-500); line-height: 1.4; }
 
 /* ---------- Services (alternating rows) ---------- */
@@ -340,7 +346,8 @@ a { color: var(--link); text-decoration: none; }
 .geo__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .geo__block .eyebrow-row { margin-bottom: 14px; }
 .geo__tags { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: 17px; font-weight: 700; color: var(--navy-800); }
-.geo__tags .dot { color: var(--ink-500); font-weight: 800; }
+/* nbsp + dot keeps the separator on the same line as its word */
+.geo__tags span:not(:last-child)::after { content: "\00a0·"; color: var(--ink-500); }
 
 /* ---------- CTA refrain band ---------- */
 .ctaband { background: var(--navy-900); color: #fff; position: relative; overflow: hidden; }
@@ -381,11 +388,13 @@ a { color: var(--link); text-decoration: none; }
 @media (max-width: 620px) {
   .container { padding: 0 20px; }
   .mobnav__list a { padding: 16px 20px; }
-  .expect__grid, .proc__grid { grid-template-columns: 1fr; }
+  .expect__grid, .proc__grid, .guide__metrics { grid-template-columns: 1fr; }
   .header__phone { display: none; }
   .btn { padding: 14px 22px; font-size: 15px; }
 }
-@media (max-width: 420px) {
+/* 480px, not 420: with a classic scrollbar the media query sees ~15px more
+   than the layout gets, so a tighter threshold left a band that overflowed. */
+@media (max-width: 480px) {
   .header__inner { gap: 12px; }
   .header__right .btn { padding: 13px 16px; font-size: 14px; }
   .header__right .btn__label { display: none; }
