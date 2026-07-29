@@ -355,9 +355,12 @@ a { color: var(--link); text-decoration: none; }
 /* ---------- CTA refrain band ---------- */
 .ctaband { background: var(--navy-900); color: #fff; position: relative; overflow: hidden; }
 .ctaband__watermark { position: absolute; top: 50%; right: -50px; transform: translateY(-50%); height: 340px; opacity: 0.06; filter: brightness(0) invert(1); pointer-events: none; }
-/* padding-block, not `padding: 72px 0`: the shorthand also zeroed the
-   horizontal padding inherited from .container, gluing the text to the edge. */
-.ctaband__inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 32px 48px; flex-wrap: wrap; padding-block: 72px; }
+.ctaband__inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 32px 48px; flex-wrap: wrap; }
+/* This element carries both .container and .ctaband__inner, so they have equal
+   specificity and `.container { padding: 0 20px }` (later in the file, inside
+   the 620px query) was zeroing the vertical padding on mobile — the heading sat
+   flush against the band's top edge. The two-class selector outranks it. */
+.ctaband .ctaband__inner { padding-block: clamp(48px, 9vw, 72px); }
 .ctaband h2 { margin: 0; color: #fff; font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; max-width: 640px; }
 .ctaband p { margin: 14px 0 0; color: #C2CCEA; font-size: 17px; line-height: 1.5; max-width: 520px; }
 .ctaband__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
