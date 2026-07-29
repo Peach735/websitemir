@@ -28,18 +28,18 @@ export function Bridge({ vertical }) {
   return (
     <div className={'bridge' + (vertical ? ' bridge--v' : '')}>
       <div className="bridge__node">
-        <span className="k">Китай · Европа</span>
-        <span className="v">Производитель</span>
+        <div className="k">Китай · Европа</div>
+        <div className="v">Производитель</div>
       </div>
       <Arrow />
       <div className="bridge__node bridge__node--mid">
-        <span className="k">Мост</span>
-        <span className="v">МИРАСА</span>
+        <div className="k">Мост</div>
+        <div className="v">МИРАСА</div>
       </div>
       <Arrow />
       <div className="bridge__node">
-        <span className="k">Беларусь · Россия</span>
-        <span className="v">Рынок</span>
+        <div className="k">Беларусь · Россия</div>
+        <div className="v">Рынок</div>
       </div>
     </div>
   );

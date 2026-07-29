@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from './Icon.jsx';
 
-export default function Guide({ email }) {
+export default function Guide() {
   return (
     <section className="section section--tint" id="about">
       <div className="container guide__grid">
@@ -23,8 +23,8 @@ export default function Guide({ email }) {
               победу в закупке и успешное исполнение контракта.</p>
           </div>
 
-          <a className="btn btn-primary btn-lg" href={'mailto:' + email} style={{ marginTop: 8 }}>
-            <Icon name="mail" />Запросить консультацию
+          <a className="btn btn-primary btn-lg" href="#contacts" style={{ marginTop: 8 }}>
+            <Icon name="arrow-right" />Запросить консультацию
           </a>
         </div>
         <div className="guide__metrics">

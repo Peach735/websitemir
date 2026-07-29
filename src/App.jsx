@@ -23,19 +23,19 @@ const WECHAT = '@mirasa';
 export default function App() {
   return (
     <>
-      <Header phone={PHONE} email={EMAIL} />
+      <Header phone={PHONE} />
       <div className="page" data-density="comfortable" data-images="on" data-bridge="on">
         <main>
-          <Hero phone={PHONE} email={EMAIL} variant="A" />
+          <Hero phone={PHONE} variant="A" />
           <Empathy />
           <Services />
-          <CtaBand email={EMAIL}
+          <CtaBand
             title="Обсудим выход вашей продукции на рынки Беларуси и России"
             text="Одна консультация — и вы получите профессиональную оценку возможностей, рисков и дальнейших шагов." />
           <Process />
           <Formats />
           <Expect />
-          <Guide email={EMAIL} />
+          <Guide />
           <Purpose />
           <Values />
           <WhoNotFor />

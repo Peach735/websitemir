@@ -4,7 +4,7 @@ import { tel, Ph, Bridge, Refrain } from './common.jsx';
 import logo from '../../assets/logo.svg';
 import heroLogistics from '../../assets/photos/hero-logistics.jpg';
 
-export default function Hero({ phone, email, variant }) {
+export default function Hero({ phone, variant }) {
   const eyebrow = (
     <div className="eyebrow-row"><span className="eyebrow">Представительство иностранных производителей · Беларусь и Россия</span></div>
   );
@@ -21,7 +21,7 @@ export default function Hero({ phone, email, variant }) {
   );
   const cta = (
     <div className="hero__cta">
-      <a className="btn btn-primary btn-lg" href={'mailto:' + email}><Icon name="mail" />Запросить консультацию</a>
+      <a className="btn btn-primary btn-lg" href="#contacts"><Icon name="arrow-right" />Запросить консультацию</a>
       <a className="callrow" href={tel(phone)}><Icon name="phone-call" />{phone}</a>
     </div>
   );
