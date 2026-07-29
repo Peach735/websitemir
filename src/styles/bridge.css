@@ -207,7 +207,7 @@ a { color: var(--link); text-decoration: none; }
 .empathy__lead p { margin: 0 0 18px; font-size: 19px; line-height: 1.6; color: var(--ink-700); font-weight: 500; }
 .empathy__questions { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
 .empathy__questions li {
-  font-size: 18px; font-style: italic; font-weight: 500; color: var(--navy-900);
+  font-size: 18px; font-weight: 600; color: var(--ink-700);
   line-height: 1.45; padding-left: 22px; position: relative;
 }
 .empathy__questions li::before { content: "—"; position: absolute; left: 0; color: var(--ink-400); font-style: normal; }

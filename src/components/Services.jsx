@@ -4,6 +4,7 @@ import { Ph } from './common.jsx';
 import svcAnalytics from '../../assets/photos/svc-analytics.jpg';
 import svcNegotiation from '../../assets/photos/svc-negotiation.jpg';
 import svcQuality from '../../assets/photos/svc-quality.jpg';
+import svcFinance from '../../assets/photos/svc-finance.jpg';
 
 const SERVICES = [
   {
@@ -30,6 +31,7 @@ const SERVICES = [
   {
     n: '04', title: 'Финансовое сопровождение',
     media: 'фото · отчётность / платежи',
+    imgSrc: svcFinance,
     text: 'Контролируем исполнение финансовых обязательств и сопровождаем процесс до полного завершения сделки.',
     items: ['Контроль сроков оплаты', 'Мониторинг исполнения контрактных обязательств', 'Работа с дебиторской задолженностью', 'Сопровождение урегулирования спорных вопросов'],
   },
