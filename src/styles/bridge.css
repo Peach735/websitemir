@@ -104,7 +104,10 @@ a { color: var(--link); text-decoration: none; }
 .header__right { display: flex; align-items: center; gap: 20px; min-width: 0; }
 .header__phone { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
 .header__phone .k { font-size: 11px; font-weight: 600; letter-spacing: .04em; color: var(--fg2); text-transform: uppercase; }
-.header__phone .v { font-size: 16px; font-weight: 800; color: var(--navy-900); }
+.header__phone .v { font-size: 16px; font-weight: 800; color: var(--navy-900); white-space: nowrap; }
+/* Nav (439px) + phone + full CTA only coexist from ~1080px; below that the
+   number was wrapping to 2-4 lines inside a 74px bar. */
+@media (max-width: 1079px) { .header__phone { display: none; } }
 
 /* Burger: only where .header__nav is hidden (<=980px) */
 .header__burger {
@@ -352,7 +355,9 @@ a { color: var(--link); text-decoration: none; }
 /* ---------- CTA refrain band ---------- */
 .ctaband { background: var(--navy-900); color: #fff; position: relative; overflow: hidden; }
 .ctaband__watermark { position: absolute; top: 50%; right: -50px; transform: translateY(-50%); height: 340px; opacity: 0.06; filter: brightness(0) invert(1); pointer-events: none; }
-.ctaband__inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; padding: 72px 0; }
+/* padding-block, not `padding: 72px 0`: the shorthand also zeroed the
+   horizontal padding inherited from .container, gluing the text to the edge. */
+.ctaband__inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 32px 48px; flex-wrap: wrap; padding-block: 72px; }
 .ctaband h2 { margin: 0; color: #fff; font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; max-width: 640px; }
 .ctaband p { margin: 14px 0 0; color: #C2CCEA; font-size: 17px; line-height: 1.5; max-width: 520px; }
 .ctaband__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
@@ -389,7 +394,6 @@ a { color: var(--link); text-decoration: none; }
   .container { padding: 0 20px; }
   .mobnav__list a { padding: 16px 20px; }
   .expect__grid, .proc__grid, .guide__metrics { grid-template-columns: 1fr; }
-  .header__phone { display: none; }
   .btn { padding: 14px 22px; font-size: 15px; }
 }
 /* 480px, not 420: with a classic scrollbar the media query sees ~15px more
