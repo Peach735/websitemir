@@ -7,6 +7,7 @@ import {
   Languages,
   Lock,
   Mail,
+  Menu,
   MessageSquare,
   Phone,
   PhoneCall,
@@ -14,6 +15,7 @@ import {
   Send,
   ShieldCheck,
   Wallet,
+  X,
 } from 'lucide-react';
 
 const ICONS = {
@@ -25,6 +27,7 @@ const ICONS = {
   languages: Languages,
   lock: Lock,
   mail: Mail,
+  menu: Menu,
   'message-square': MessageSquare,
   phone: Phone,
   'phone-call': PhoneCall,
@@ -32,6 +35,7 @@ const ICONS = {
   send: Send,
   'shield-check': ShieldCheck,
   wallet: Wallet,
+  x: X,
 };
 
 export default function Icon({ name, ...props }) {
