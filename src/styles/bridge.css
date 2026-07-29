@@ -186,9 +186,21 @@ a { color: var(--link); text-decoration: none; }
 .bridge__link svg { width: 22px; height: 22px; display: block; }
 .page[data-bridge="off"] .bridge { display: none; }
 
-/* vertical bridge (for hero A card) */
-.bridge--v { flex-direction: column; gap: 0; }
-.bridge--v .bridge__link { padding: 8px 0; transform: rotate(90deg); }
+/* Stacked bridge. Rotate the icon, never the .bridge__link box: the box spans
+   the full row, so rotating it swings the icon far out of place. */
+.bridge--v, .bridge--stack { flex-direction: column; gap: 0; }
+.bridge--v .bridge__link, .bridge--stack .bridge__link {
+  padding: 8px 0; justify-content: center;
+}
+.bridge--v .bridge__link svg, .bridge--stack .bridge__link svg { transform: rotate(90deg); }
+
+/* Three nodes side by side need ~200px each ("Производитель" is 109px at 16px
+   plus padding), so stack below ~700px instead of letting the word overflow. */
+@media (max-width: 700px) {
+  .bridge { flex-direction: column; }
+  .bridge__link { padding: 8px 0; justify-content: center; }
+  .bridge__link svg { transform: rotate(90deg); }
+}
 
 /* ---------- HERO ---------- */
 .hero { background: var(--surface-1); border-bottom: 1px solid var(--line-200); padding: 84px 0 var(--sec-pad); position: relative; overflow: hidden; }
@@ -228,13 +240,9 @@ a { color: var(--link); text-decoration: none; }
 }
 
 
-/* Bridge strip below hero photo */
-.hero__aside-bridge { margin-top: 14px; }
-.hero__aside-bridge .bridge__node { padding: 12px 14px; }
-.hero__aside-bridge .bridge__node .k { font-size: 10px; }
-.hero__aside-bridge .bridge__node .v { font-size: 14px; }
-.hero__aside-bridge .bridge__link { padding: 0 8px; }
-.page[data-bridge="off"] .hero__aside-bridge { display: none; }
+/* Bridge strip spanning the hero, below the split grid */
+.hero__bridge-strip { margin-top: 40px; }
+.page[data-bridge="off"] .hero__bridge-strip { display: none; }
 
 /* Variant B — centered editorial */
 .hero-b { text-align: center; }
@@ -374,8 +382,6 @@ a { color: var(--link); text-decoration: none; }
   .container { padding: 0 20px; }
   .mobnav__list a { padding: 16px 20px; }
   .expect__grid, .proc__grid { grid-template-columns: 1fr; }
-  .bridge { flex-direction: column; }
-  .bridge__link { transform: rotate(90deg); padding: 8px 0; }
   .header__phone { display: none; }
   .btn { padding: 14px 22px; font-size: 15px; }
 }

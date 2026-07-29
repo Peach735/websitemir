@@ -64,11 +64,11 @@ export default function Hero({ phone, variant }) {
               label="фото · отгрузка / логистика"
               src={heroLogistics} />
           </div>
-          <div className="hero__aside-bridge">
-            <Bridge />
-          </div>
         </aside>
       </div>
+      {/* Full-width strip: 3 cards in a ~400px column can't fit their labels,
+          and the left-to-right metaphor reads better across the page. */}
+      <div className="container hero__bridge-strip"><Bridge /></div>
     </section>
   );
 }
