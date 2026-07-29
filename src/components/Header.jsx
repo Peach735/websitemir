@@ -12,9 +12,13 @@ export default function Header({ phone }) {
   return (
     <header className={'header' + (scrolled ? ' header--scrolled' : '')}>
       <div className="container header__inner">
-        <span className="brand-lockup" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <button
+          type="button"
+          className="brand-lockup"
+          aria-label="МИРАСА — наверх"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img className="brand-mark" src={logo} alt="МИРАСА" />
-        </span>
+        </button>
         <nav className="header__nav">
           <a href="#services">Услуги</a>
           <a href="#process">Процесс</a>
@@ -27,7 +31,9 @@ export default function Header({ phone }) {
             <div className="v">{phone}</div>
           </div>
           <a className="btn btn-primary" href="#contacts">
-            <Icon name="arrow-right" />Запросить консультацию
+            <Icon name="arrow-right" />
+            <span className="btn__label">Запросить консультацию</span>
+            <span className="btn__label--short">Консультация</span>
           </a>
         </div>
       </div>

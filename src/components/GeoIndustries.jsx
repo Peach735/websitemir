@@ -18,7 +18,7 @@ function TagRow({ items }) {
 
 export default function GeoIndustries() {
   return (
-    <section className="section" id="geo-industries">
+    <section className="section section--compact" id="geo-industries">
       <div className="container geo__grid">
         <div className="geo__block">
           <div className="eyebrow-row"><span className="eyebrow">География работы</span></div>

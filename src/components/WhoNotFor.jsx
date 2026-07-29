@@ -11,7 +11,8 @@ export default function WhoNotFor() {
     <section className="section section--tint" id="who-not-for">
       <div className="container">
         <div className="section-head">
-          <div className="eyebrow-row"><span className="eyebrow">Кому мы не подходим</span></div>
+          <div className="eyebrow-row"><span className="eyebrow">Границы сотрудничества</span></div>
+          <h2 className="h2">Кому мы не подходим</h2>
         </div>
         <div className="values__grid">
           {REASONS.map((r) => (

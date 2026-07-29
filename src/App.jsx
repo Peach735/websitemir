@@ -42,7 +42,7 @@ export default function App() {
           <GeoIndustries />
           <Contacts phone={PHONE} email={EMAIL} messenger={MESSENGER} wechat={WECHAT} />
         </main>
-        <Footer phone={PHONE} />
+        <Footer />
       </div>
     </>
   );
