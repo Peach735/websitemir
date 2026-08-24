@@ -1,0 +1,27 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<link rel="stylesheet" href="_card.css">
+<style>
+  body{padding:24px 26px;}
+  .ribbon{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .step{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--fg1);background:var(--surface-1);border:1px solid var(--line-200);border-radius:999px;padding:8px 14px;}
+  .step .n{font-size:11px;font-weight:800;color:var(--action);}
+  .arr{color:var(--ink-400);}
+  .arr svg{width:16px;height:16px;display:block;}
+</style></head>
+<body>
+  <p class="card-label">Deal-cycle ribbon · steps</p>
+  <div class="ribbon">
+    <span class="step"><span class="n">01</span>Анализ рынка</span>
+    <span class="arr"><i data-lucide="arrow-right"></i></span>
+    <span class="step"><span class="n">02</span>Поиск клиента</span>
+    <span class="arr"><i data-lucide="arrow-right"></i></span>
+    <span class="step"><span class="n">03</span>Переговоры</span>
+    <span class="arr"><i data-lucide="arrow-right"></i></span>
+    <span class="step"><span class="n">04</span>Тендеры / биржа</span>
+  </div>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>lucide.createIcons();</script>
+</body></html>
