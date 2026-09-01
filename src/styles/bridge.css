@@ -441,6 +441,11 @@ a { color: var(--link); text-decoration: none; }
   .mobnav__list a { padding: 16px 20px; }
   .expect__grid, .proc__grid, .guide__metrics { grid-template-columns: 1fr; }
   .btn { padding: 14px 22px; font-size: 15px; }
+  /* Comfortable density's 120px section padding was never scaled down for
+     phones — every section boundary read as a huge blank gap on mobile.
+     Reuse the design system's own compact rhythm instead of inventing new
+     numbers. */
+  .page { --sec-pad: 72px; --row-gap: 44px; }
 }
 /* 480px, not 420: with a classic scrollbar the media query sees ~15px more
    than the layout gets, so a tighter threshold left a band that overflowed. */
