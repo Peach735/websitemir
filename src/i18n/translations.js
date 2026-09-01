@@ -174,8 +174,10 @@ const ru = {
     eyebrow: 'Контакты',
     lead: 'Свяжитесь удобным для вас способом — ответим в течение рабочего дня.',
     emailLabel: 'Email',
-    messengerLabel: 'Telegram / WhatsApp',
     wechatLabel: 'WeChat',
+    telegramLabel: 'Telegram',
+    whatsappLabel: 'WhatsApp',
+    phoneLabel: 'Телефон',
   },
   footer: {
     tagline: 'экспертиза без границ',
@@ -356,8 +358,10 @@ const en = {
     eyebrow: 'Contacts',
     lead: 'Reach out however\u2019s convenient — we reply within one business day.',
     emailLabel: 'Email',
-    messengerLabel: 'Telegram / WhatsApp',
     wechatLabel: 'WeChat',
+    telegramLabel: 'Telegram',
+    whatsappLabel: 'WhatsApp',
+    phoneLabel: 'Phone',
   },
   footer: {
     tagline: 'expertise without borders',

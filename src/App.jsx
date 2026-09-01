@@ -16,8 +16,10 @@ import Contacts from './components/Contacts.jsx';
 import Footer from './components/Footer.jsx';
 
 const EMAIL = 'mirasametby@gmail.com';
-const MESSENGER = '@mirasa';
 const WECHAT = '@mirasa';
+const TELEGRAM = '@mirasa';
+const WHATSAPP = '@mirasa';
+const PHONE = '+375 29 000-00-00';
 
 export default function App() {
   return (
@@ -37,7 +39,7 @@ export default function App() {
           <Values />
           <WhoNotFor />
           <GeoIndustries />
-          <Contacts email={EMAIL} messenger={MESSENGER} wechat={WECHAT} />
+          <Contacts email={EMAIL} wechat={WECHAT} telegram={TELEGRAM} whatsapp={WHATSAPP} phone={PHONE} />
         </main>
         <Footer />
       </div>

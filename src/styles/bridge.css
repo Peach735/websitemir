@@ -385,6 +385,15 @@ a { color: var(--link); text-decoration: none; }
 .crow__ic svg { width: 20px; height: 20px; }
 .crow .k { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--fg2); display: block; }
 .crow .v { font-size: 19px; font-weight: 700; color: var(--fg1); }
+.crow--lead { border-color: var(--navy-800); }
+.crow--lead .crow__ic { background: var(--navy-800); color: #fff; }
+.crow--lead .v { font-size: 19px; font-weight: 800; }
+.contacts__phone-plain {
+  display: flex; align-items: baseline; gap: 8px; padding: 4px 20px;
+  color: var(--fg2); text-decoration: none; font-size: 14px;
+}
+.contacts__phone-plain .k { font-weight: 500; }
+.contacts__phone-plain .v { font-weight: 500; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--navy-900); color: #C2CCEA; padding: 44px 0; }
