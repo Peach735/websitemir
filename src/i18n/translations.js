@@ -172,6 +172,7 @@ const ru = {
   },
   contacts: {
     eyebrow: 'Контакты',
+    heading: 'Свяжитесь с нами',
     emailLabel: 'Email',
     wechatLabel: 'WeChat',
     telegramLabel: 'Telegram',
@@ -355,6 +356,7 @@ const en = {
   },
   contacts: {
     eyebrow: 'Contacts',
+    heading: 'Get in touch',
     emailLabel: 'Email',
     wechatLabel: 'WeChat',
     telegramLabel: 'Telegram',

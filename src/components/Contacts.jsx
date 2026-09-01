@@ -10,9 +10,10 @@ export default function Contacts({ email, wechat, telegram, whatsapp, phone }) {
   return (
     <section className="section contacts" id="contacts">
       <SectionWatermark />
-      <div className="container contacts__inner">
-        <div>
+      <div className="container">
+        <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">{c.eyebrow}</span></div>
+          <h2 className="h2">{c.heading}</h2>
         </div>
         <div className="contacts__rows">
           <a className="crow crow--lead" href={'mailto:' + email}>
