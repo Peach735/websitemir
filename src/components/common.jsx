@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from './Icon.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
+import logo from '../../assets/logo.svg';
 
 export const tel = (p) => 'tel:' + p.replace(/[^\d+]/g, '');
 
@@ -18,6 +19,20 @@ export function Ph({ label, style, src }) {
     <div className="ph" style={style}>
       <span className="ph__tag">{label}</span>
     </div>
+  );
+}
+
+// Recurring "M" background mark used on every content section per brand
+// guidance — subtle on light sections, inverted to white on dark ones
+// (.purpose, .ctaband). Purely decorative.
+export function SectionWatermark({ inverted }) {
+  return (
+    <img
+      className={'section-watermark' + (inverted ? ' section-watermark--inverted' : '')}
+      src={logo}
+      alt=""
+      aria-hidden="true"
+    />
   );
 }
 

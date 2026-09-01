@@ -28,7 +28,7 @@ body {
 
 .container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
 .container--narrow { max-width: var(--container-narrow); }
-.section { padding: var(--sec-pad) 0; }
+.section { padding: var(--sec-pad) 0; position: relative; overflow: hidden; }
 /* Short info strips don't need the full section rhythm. */
 .section--compact { padding: calc(var(--sec-pad) * 0.5) 0; }
 
@@ -216,7 +216,14 @@ a { color: var(--link); text-decoration: none; }
 
 /* ---------- HERO ---------- */
 .hero { background: var(--surface-1); border-bottom: 1px solid var(--line-200); padding: 84px 0 var(--sec-pad); position: relative; overflow: hidden; }
-.hero__watermark { position: absolute; top: -70px; right: -80px; height: 540px; width: auto; opacity: 0.045; pointer-events: none; user-select: none; }
+.hero__watermark { position: absolute; top: -40px; left: -60px; right: auto; height: 420px; width: auto; opacity: 0.05; pointer-events: none; user-select: none; }
+.section-watermark {
+  position: absolute; top: 50%; right: -70px; transform: translateY(-50%);
+  height: 300px; width: auto; opacity: 0.05;
+  pointer-events: none; user-select: none;
+}
+.section-watermark--inverted { filter: brightness(0) invert(1); opacity: 0.07; }
+@media (max-width: 900px) { .section-watermark { display: none; } }
 .hero .eyebrow { color: var(--action); }
 .hero h1 {
   margin: 4px 0 0; font-weight: 800;
