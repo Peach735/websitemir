@@ -210,7 +210,7 @@ const en = {
   },
   hero: {
     eyebrow: 'Representation for foreign manufacturers · Belarus and Russia',
-    headline: ['A bridge between your production ', 'and the markets of Belarus and Russia'],
+    headline: ['Bridging your production ', 'to Belarus–Russia markets'],
     lead: 'From production to contract. MIRASA helps foreign manufacturers enter the markets of Belarus and Russia, find industrial buyers, and manages sales at every stage — from first contact to contract execution and payment. Local representation. Industrial procurement expertise. Tender and contract support.',
     cta: 'Request a consultation',
     photoLabel: 'photo · shipping / logistics',

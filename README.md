@@ -163,7 +163,7 @@ If imagery is ever introduced, it should be cool-toned, restrained, documentary
 | `src/` | The production landing site — Vite + React. See "Running the site" below. |
 
 ### The production site
-The МИРАСА single-page corporate site — sticky header with phone CTA, hero
+The МИРАСА single-page corporate site — sticky header with an email-first CTA, hero
 ("bridge" storytelling variant), services, deal process, values, cooperation
 formats, contacts — lives in `src/` as a normal Vite + React project (see root
 `package.json`), not as a standalone prototype.
