@@ -377,7 +377,7 @@ a { color: var(--link); text-decoration: none; }
 
 /* ---------- Contacts ---------- */
 .contacts { background: var(--surface-1); }
-.contacts__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
+.contacts__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: start; }
 .contacts__media { display: flex; flex-direction: column; height: 100%; }
 .contacts__photo-frame { flex: 1; position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 320px; margin-top: 24px; }
 .contacts__photo-frame .ph { position: absolute; inset: 0; min-height: 0; border-radius: 0; border: none; }
