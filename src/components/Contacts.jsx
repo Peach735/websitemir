@@ -3,7 +3,7 @@ import Icon from './Icon.jsx';
 import { Ph, SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { tel } from './common.jsx';
-import contactsPhoto from '../../assets/photos/svc-negotiation.jpg';
+import contactsPhoto from '../../assets/photos/contacts-email.jpg';
 
 export default function Contacts({ email, wechat, telegram, whatsapp, phone }) {
   const { t } = useLanguage();

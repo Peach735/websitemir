@@ -173,7 +173,7 @@ const ru = {
   contacts: {
     eyebrow: 'Контакты',
     heading: 'Свяжитесь с нами',
-    photoLabel: 'фото · договорённость',
+    photoLabel: 'фото · почта',
     emailLabel: 'Email',
     wechatLabel: 'WeChat',
     telegramLabel: 'Telegram',
@@ -358,7 +358,7 @@ const en = {
   contacts: {
     eyebrow: 'Contacts',
     heading: 'Get in touch',
-    photoLabel: 'photo · a handshake on the deal',
+    photoLabel: 'photo · inbox',
     emailLabel: 'Email',
     wechatLabel: 'WeChat',
     telegramLabel: 'Telegram',
