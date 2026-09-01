@@ -79,7 +79,6 @@ export default function Header({ email }) {
           ))}
         </nav>
         <div className="header__right">
-          <LangSwitch className="header__lang" />
           <button type="button" className="btn btn-primary" onClick={() => setModalOpen(true)}>
             <Icon name="arrow-right" />
             <span className="btn__label">{t.header.consultation}</span>
@@ -94,6 +93,7 @@ export default function Header({ email }) {
             onClick={() => setMenuOpen((v) => !v)}>
             <Icon name={menuOpen ? 'x' : 'menu'} />
           </button>
+          <LangSwitch className="header__lang" />
         </div>
       </div>
 
