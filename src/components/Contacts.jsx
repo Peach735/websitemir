@@ -1,8 +1,9 @@
 import React from 'react';
 import Icon from './Icon.jsx';
-import { SectionWatermark } from './common.jsx';
+import { Ph, SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { tel } from './common.jsx';
+import contactsPhoto from '../../assets/photos/svc-negotiation.jpg';
 
 export default function Contacts({ email, wechat, telegram, whatsapp, phone }) {
   const { t } = useLanguage();
@@ -10,10 +11,13 @@ export default function Contacts({ email, wechat, telegram, whatsapp, phone }) {
   return (
     <section className="section contacts" id="contacts">
       <SectionWatermark />
-      <div className="container">
-        <div className="section-head">
+      <div className="container contacts__inner">
+        <div className="contacts__media">
           <div className="eyebrow-row"><span className="eyebrow">{c.eyebrow}</span></div>
           <h2 className="h2">{c.heading}</h2>
+          <div className="contacts__photo-frame">
+            <Ph label={c.photoLabel} src={contactsPhoto} />
+          </div>
         </div>
         <div className="contacts__rows">
           <a className="crow crow--lead" href={'mailto:' + email}>
@@ -32,9 +36,9 @@ export default function Contacts({ email, wechat, telegram, whatsapp, phone }) {
             <span className="crow__ic"><Icon name="message-circle" /></span>
             <span><span className="k">{c.whatsappLabel}</span><span className="v">{whatsapp}</span></span>
           </div>
-          <a className="crow" href={tel(phone)}>
-            <span className="crow__ic"><Icon name="phone" /></span>
-            <span><span className="k">{c.phoneLabel}</span><span className="v">{phone}</span></span>
+          <a className="contacts__phone-plain" href={tel(phone)}>
+            <span className="k">{c.phoneLabel}</span>
+            <span className="v">{phone}</span>
           </a>
         </div>
       </div>
