@@ -220,7 +220,7 @@ a { color: var(--link); text-decoration: none; }
 .hero .eyebrow { color: var(--action); }
 .hero h1 {
   margin: 4px 0 0; font-weight: 800;
-  font-size: clamp(38px, 5vw, 66px); line-height: 1.04; letter-spacing: -0.025em;
+  font-size: clamp(38px, 3.1vw, 46px); line-height: 1.08; letter-spacing: -0.025em;
   color: var(--navy-900); text-wrap: balance;
 }
 .hero h1 .ink { color: var(--ink-900); }
@@ -231,7 +231,7 @@ a { color: var(--link); text-decoration: none; }
 .hero__refrain span:not(:last-child)::after { content: "\00a0·"; color: var(--ink-500); }
 
 /* Variant A — split */
-.hero-a .hero__grid { position: relative; display: grid; grid-template-columns: 1.35fr 1fr; gap: 56px; align-items: stretch; }
+.hero-a .hero__grid { position: relative; display: grid; grid-template-columns: 1.55fr 1fr; gap: 56px; align-items: stretch; }
 .hero-a .hero__main { min-width: 0; display: flex; flex-direction: column; justify-content: center; }
 .hero__aside { display: flex; flex-direction: column; }
 
