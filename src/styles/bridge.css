@@ -378,7 +378,6 @@ a { color: var(--link); text-decoration: none; }
 /* ---------- Contacts ---------- */
 .contacts { background: var(--surface-1); }
 .contacts__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
-.contacts__lead { font-size: 17px; color: var(--fg2); line-height: 1.5; margin: 14px 0 0; max-width: 34ch; }
 .contacts__rows { display: flex; flex-direction: column; gap: 12px; }
 .crow { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border: 1px solid var(--line-300); border-radius: var(--radius-md); background: #fff; }
 .crow__ic { width: 42px; height: 42px; border-radius: 8px; background: var(--navy-050); display: flex; align-items: center; justify-content: center; color: var(--action); flex: 0 0 auto; }
@@ -388,12 +387,6 @@ a { color: var(--link); text-decoration: none; }
 .crow--lead { border-color: var(--navy-800); }
 .crow--lead .crow__ic { background: var(--navy-800); color: #fff; }
 .crow--lead .v { font-size: 19px; font-weight: 800; }
-.contacts__phone-plain {
-  display: flex; align-items: baseline; gap: 8px; padding: 4px 20px;
-  color: var(--fg2); text-decoration: none; font-size: 14px;
-}
-.contacts__phone-plain .k { font-weight: 500; }
-.contacts__phone-plain .v { font-weight: 500; }
 
 /* ---------- Footer ---------- */
 .footer { background: var(--navy-900); color: #C2CCEA; padding: 44px 0; }

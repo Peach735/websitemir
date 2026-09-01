@@ -172,7 +172,6 @@ const ru = {
   },
   contacts: {
     eyebrow: 'Контакты',
-    lead: 'Свяжитесь удобным для вас способом — ответим в течение рабочего дня.',
     emailLabel: 'Email',
     wechatLabel: 'WeChat',
     telegramLabel: 'Telegram',
@@ -356,7 +355,6 @@ const en = {
   },
   contacts: {
     eyebrow: 'Contacts',
-    lead: 'Reach out however\u2019s convenient — we reply within one business day.',
     emailLabel: 'Email',
     wechatLabel: 'WeChat',
     telegramLabel: 'Telegram',

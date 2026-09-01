@@ -13,7 +13,6 @@ export default function Contacts({ email, wechat, telegram, whatsapp, phone }) {
       <div className="container contacts__inner">
         <div>
           <div className="eyebrow-row"><span className="eyebrow">{c.eyebrow}</span></div>
-          <p className="contacts__lead">{c.lead}</p>
         </div>
         <div className="contacts__rows">
           <a className="crow crow--lead" href={'mailto:' + email}>
@@ -32,9 +31,9 @@ export default function Contacts({ email, wechat, telegram, whatsapp, phone }) {
             <span className="crow__ic"><Icon name="message-circle" /></span>
             <span><span className="k">{c.whatsappLabel}</span><span className="v">{whatsapp}</span></span>
           </div>
-          <a className="contacts__phone-plain" href={tel(phone)}>
-            <span className="k">{c.phoneLabel}</span>
-            <span className="v">{phone}</span>
+          <a className="crow" href={tel(phone)}>
+            <span className="crow__ic"><Icon name="phone" /></span>
+            <span><span className="k">{c.phoneLabel}</span><span className="v">{phone}</span></span>
           </a>
         </div>
       </div>
