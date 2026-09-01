@@ -459,6 +459,10 @@ a { color: var(--link); text-decoration: none; }
   .header__right .btn__label { display: none; }
   .header__right .btn__label--short { display: inline; }
   .lang-switch__btn { padding: 6px 9px; }
+  /* mirasametby@gmail.com has no whitespace to wrap on — at 19px it broke
+     mid-word ("gmail.c" / "om"). Shrinking just enough to fit on one line
+     reads far better than a forced break. */
+  .crow--lead .v { font-size: 15px; }
 }
 /* Header row's min-content still overflows the smallest common phone width
    (320px) with all of brand + lang-switch + CTA + burger fighting for room —
@@ -470,4 +474,6 @@ a { color: var(--link); text-decoration: none; }
   .header__right .btn { padding: 12px 8px; }
   .lang-switch__btn { padding: 4px 6px; }
   .brand-mark { height: 36px; }
+  .crow { padding: 16px; gap: 12px; }
+  .crow--lead .v { font-size: 14px; }
 }
