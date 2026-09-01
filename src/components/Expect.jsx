@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon.jsx';
+import { SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Expect() {
@@ -7,6 +8,7 @@ export default function Expect() {
   const e = t.expect;
   return (
     <section className="section section--tint" id="expect">
+      <SectionWatermark />
       <div className="container">
         <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">{e.eyebrow}</span></div>

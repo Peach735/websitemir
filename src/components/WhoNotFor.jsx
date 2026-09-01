@@ -1,4 +1,5 @@
 import React from 'react';
+import { SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function WhoNotFor() {
@@ -6,6 +7,7 @@ export default function WhoNotFor() {
   const w = t.whoNotFor;
   return (
     <section className="section section--tint" id="who-not-for">
+      <SectionWatermark />
       <div className="container">
         <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">{w.eyebrow}</span></div>

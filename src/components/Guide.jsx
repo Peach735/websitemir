@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon.jsx';
+import { SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Guide() {
@@ -7,6 +8,7 @@ export default function Guide() {
   const g = t.guide;
   return (
     <section className="section section--tint" id="about">
+      <SectionWatermark />
       <div className="container guide__grid">
         <div className="guide__body">
           <div className="section-head" style={{ marginBottom: 0 }}>

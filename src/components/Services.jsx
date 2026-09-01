@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from './Icon.jsx';
-import { Ph } from './common.jsx';
+import { Ph, SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import svcAnalytics from '../../assets/photos/svc-analytics.jpg';
 import svcNegotiation from '../../assets/photos/svc-negotiation.jpg';
@@ -14,6 +14,7 @@ export default function Services() {
   const s = t.services;
   return (
     <section className="section" id="services">
+      <SectionWatermark />
       <div className="container">
         <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">{s.eyebrow}</span></div>

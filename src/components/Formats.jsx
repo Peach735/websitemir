@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon.jsx';
+import { SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Formats() {
@@ -7,6 +8,7 @@ export default function Formats() {
   const f = t.formats;
   return (
     <section className="section section--tint" id="formats">
+      <SectionWatermark />
       <div className="container">
         <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">{f.eyebrow}</span></div>

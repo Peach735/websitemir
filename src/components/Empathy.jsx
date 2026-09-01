@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './Icon.jsx';
+import { SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Empathy() {
@@ -7,6 +8,7 @@ export default function Empathy() {
   const e = t.empathy;
   return (
     <section className="section" id="problem">
+      <SectionWatermark />
       <div className="container empathy__grid">
         <div className="empathy__lead">
           <div className="section-head" style={{ marginBottom: 24 }}>

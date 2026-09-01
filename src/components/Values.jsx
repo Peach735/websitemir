@@ -1,4 +1,5 @@
 import React from 'react';
+import { SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Values() {
@@ -6,6 +7,7 @@ export default function Values() {
   const v = t.values;
   return (
     <section className="section" id="values">
+      <SectionWatermark />
       <div className="container">
         <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">{v.eyebrow}</span></div>

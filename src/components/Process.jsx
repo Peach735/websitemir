@@ -1,4 +1,5 @@
 import React from 'react';
+import { SectionWatermark } from './common.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Process() {
@@ -6,6 +7,7 @@ export default function Process() {
   const p = t.process;
   return (
     <section className="section" id="process">
+      <SectionWatermark />
       <div className="container">
         <div className="section-head">
           <div className="eyebrow-row"><span className="eyebrow">{p.eyebrow}</span></div>
