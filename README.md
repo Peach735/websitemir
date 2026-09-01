@@ -27,10 +27,7 @@ the canonical source going forward.
   committees, and quality control — "we understand the customer's requirements
   from the inside."
 - **Primary product:** a single-page corporate landing site (Russian language).
-- **Primary conversion goal:** a **phone call**. The phone number is sticky in
-  the header and repeated in the hero and footer. Universal CTA: **«Позвонить»**.
-  Phone placeholder used throughout: `[ТЕЛЕФОН]`. Other contact placeholders:
-  `[EMAIL]`, `[TELEGRAM/WHATSAPP]`.
+- **Primary conversion goal:** an **email**. The phone call model was dropped per client direction — see `CLIENT_FEEDBACK.md` item 3. The CTA opens a contact modal that leads with email. Contact placeholders used throughout: `[EMAIL]`, `[TELEGRAM/WHATSAPP]`, `[ТЕЛЕФОН]`.
 
 ### Sources given
 - A single detailed written brief (no external links, repos, or design files).
@@ -68,7 +65,7 @@ beyond the · separator and → arrow used structurally.
   до получения оплаты.»*
 - Confidentiality principle: *«Информация о поставщиках, заказчиках, ценах и
   условиях не передаётся третьим лицам.»*
-- CTA: *«Позвонить»* (always paired with the visible phone number).
+- CTA: *«Запросить консультацию»* (opens a contact modal leading with email — see `CLIENT_FEEDBACK.md` item 3).
 
 ---
 
