@@ -1,37 +1,35 @@
 import React from 'react';
 import Icon from './Icon.jsx';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Guide() {
+  const { t } = useLanguage();
+  const g = t.guide;
   return (
     <section className="section section--tint" id="about">
       <div className="container guide__grid">
         <div className="guide__body">
           <div className="section-head" style={{ marginBottom: 0 }}>
-            <div className="eyebrow-row"><span className="eyebrow">Почему МИРАСА — ваш мост на рынок</span></div>
-            <h2 className="h2">Вы строите производство. Мы помогаем выстроить путь к заказчику</h2>
+            <div className="eyebrow-row"><span className="eyebrow">{g.eyebrow}</span></div>
+            <h2 className="h2">{g.heading}</h2>
           </div>
-          <p className="lead">МИРАСА обеспечивает локальное представительство производителей на рынках Беларуси и России, 
-            сопровождая проекты от первого контакта до исполнения контракта и получения оплаты.</p>
-          <p className="body">Наш опыт в сфере промышленных закупок позволяет понимать требования заказчиков,
-            особенности тендерных процедур и факторы, влияющие на принятие решений о закупках.</p>
+          <p className="lead">{g.lead}</p>
+          <p className="body">{g.body}</p>
 
           <div className="guide__why">
-            <h3>Почему это работает</h3>
-            <p className="body">Мы понимаем, как принимаются решения о закупках: требования технических служб,
-              логика тендерных комиссий и критерии выбора поставщиков.</p>
-            <p className="body">Это позволяет заранее учитывать реальные факторы, влияющие на допуск продукции,
-              победу в закупке и успешное исполнение контракта.</p>
+            <h3>{g.whyTitle}</h3>
+            <p className="body">{g.why1}</p>
+            <p className="body">{g.why2}</p>
           </div>
 
           <a className="btn btn-primary btn-lg" href="#contacts" style={{ marginTop: 8 }}>
-            <Icon name="arrow-right" />Запросить консультацию
+            <Icon name="arrow-right" />{g.cta}
           </a>
         </div>
         <div className="guide__metrics">
-          <div className="metric"><div className="num">18+</div><div className="lbl">лет практической экспертизы</div></div>
-          <div className="metric"><div className="num">Беларусь и Россия</div><div className="lbl">локальное присутствие и сопровождение проектов</div></div>
-          <div className="metric"><div className="num">Тендеры и биржевые торги</div><div className="lbl">сопровождение закупочных процедур и коммерческих сделок</div></div>
-          <div className="metric"><div className="num">До результата</div><div className="lbl">контроль исполнения обязательств и расчетов по контракту</div></div>
+          {g.metrics.map((m) => (
+            <div className="metric" key={m.num + m.lbl}><div className="num">{m.num}</div><div className="lbl">{m.lbl}</div></div>
+          ))}
         </div>
       </div>
     </section>

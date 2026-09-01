@@ -1,28 +1,26 @@
 import React from 'react';
 import Icon from './Icon.jsx';
-import { tel, Ph, Bridge, Refrain } from './common.jsx';
+import { Ph, Bridge, Refrain } from './common.jsx';
 import logo from '../../assets/logo.svg';
 import heroLogistics from '../../assets/photos/hero-logistics.jpg';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
-export default function Hero({ phone, variant }) {
+export default function Hero({ variant }) {
+  const { t } = useLanguage();
+  const h = t.hero;
+
   const eyebrow = (
-    <div className="eyebrow-row"><span className="eyebrow">Представительство иностранных производителей · Беларусь и Россия</span></div>
+    <div className="eyebrow-row"><span className="eyebrow">{h.eyebrow}</span></div>
   );
   const headline = (
-    <h1>Мост между вашим производством <span className="ink">и рынками Беларуси и&nbsp;России</span></h1>
+    <h1>{h.headline[0]}<span className="ink">{h.headline[1]}</span></h1>
   );
   const lead = (
-    <p className="hero__lead">
-      Вы производите продукцию. Мы обеспечиваем её выход на рынок — от 
-      первого контакта с заказчиком до исполнения контракта и получения оплаты. 
-      Локальное представительство с многолетней экспертизой в области промышленных закупок, 
-      тендерных процедур и сопровождения поставок.
-    </p>
+    <p className="hero__lead">{h.lead}</p>
   );
   const cta = (
     <div className="hero__cta">
-      <a className="btn btn-primary btn-lg" href="#contacts"><Icon name="arrow-right" />Запросить консультацию</a>
-      <a className="callrow" href={tel(phone)}><Icon name="phone-call" />{phone}</a>
+      <a className="btn btn-primary btn-lg" href="#contacts"><Icon name="arrow-right" />{h.cta}</a>
     </div>
   );
 
@@ -40,7 +38,7 @@ export default function Hero({ phone, variant }) {
         <div className="container hero__bridge-wrap"><Bridge /></div>
         <div className="container hero__wide">
           <Ph
-            label="фото · продукция в цехе производителя" />
+            label={h.wideLabel} />
         </div>
       </section>
     );
@@ -61,7 +59,7 @@ export default function Hero({ phone, variant }) {
         <aside className="hero__aside">
           <div className="hero__photo-frame">
             <Ph
-              label="фото · отгрузка / логистика"
+              label={h.photoLabel}
               src={heroLogistics} />
           </div>
         </aside>

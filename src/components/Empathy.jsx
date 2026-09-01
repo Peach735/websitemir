@@ -1,35 +1,30 @@
 import React from 'react';
 import Icon from './Icon.jsx';
-
-const PAINS = [
-  { icon: 'languages', t: 'Другой язык и деловая среда', d: 'Переговоры, документация, технические требования и закупочные процедуры требуют локальной экспертизы и постоянного взаимодействия с заказчиком.' },
-  { icon: 'gavel', t: 'Тендеры и биржевые торги', d: 'Сопровождение участия в закупках государственных и промышленных предприятий, а также в биржевых торгах на БУТБ, включая брокерское сопровождение сделок.' },
-  { icon: 'clipboard-check', t: 'Испытания и приемка продукции', d: 'Организация испытаний, взаимодействие с техническими службами, сопровождение квалификации и приемки продукции.' },
-  { icon: 'wallet', t: 'Контроль исполнения обязательств', d: 'Мониторинг поставок, контроль расчетов и сопровождение урегулирования дебиторской задолженности.' },
-];
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Empathy() {
+  const { t } = useLanguage();
+  const e = t.empathy;
   return (
     <section className="section" id="problem">
       <div className="container empathy__grid">
         <div className="empathy__lead">
           <div className="section-head" style={{ marginBottom: 24 }}>
-            <div className="eyebrow-row"><span className="eyebrow">С какими задачами сталкиваются иностранные производители</span></div>
-            <h2 className="h2">Выход на рынок Беларуси и России требует не только конкурентоспособной продукции, но и понимания местных процедур, требований заказчиков и особенностей закупочной деятельности</h2>
+            <div className="eyebrow-row"><span className="eyebrow">{e.eyebrow}</span></div>
+            <h2 className="h2">{e.heading}</h2>
           </div>
-          <p>Производители часто сталкиваются со следующими вопросами:</p>
+          <p>{e.intro}</p>
           <ul className="empathy__questions">
-            <li>Как найти надежного заказчика?</li>
-            <li>Как пройти тендерную процедуру или биржевые торги?</li>
-            <li>Как организовать испытания и согласование продукции?</li>
-            <li>Как обеспечить своевременную оплату поставленного товара?</li>
+            {e.questions.map((q) => (
+              <li key={q}>{q}</li>
+            ))}
           </ul>
           <div className="empathy__turn">
-            <strong>МИРАСА помогает решать эти задачи на каждом этапе сотрудничества.</strong>
+            <strong>{e.turn}</strong>
           </div>
         </div>
         <div className="empathy__pains">
-          {PAINS.map((p) => (
+          {e.pains.map((p) => (
             <div className="pain" key={p.t}>
               <span className="pain__ic"><Icon name={p.icon} /></span>
               <div>

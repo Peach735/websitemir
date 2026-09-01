@@ -1,23 +1,19 @@
 import React from 'react';
-
-const STEPS = [
-  { n: 'Шаг 1', t: 'Первичный контакт', d: 'Обсуждаем вашу продукцию, задачи и рынок. Определяем возможные направления выхода на рынки Беларуси и России.' },
-  { n: 'Шаг 2', t: 'Анализ и стратегия', d: 'Оцениваем потенциал продукции, требования заказчиков и риски. Формируем стратегию выхода на рынок и план действий.' },
-  { n: 'Шаг 3', t: 'Представительство и сопровождение сделки', d: 'Представляем ваши интересы на месте: тендеры, биржевые торги, испытания продукции, переговоры и приемка.' },
-  { n: 'Шаг 4', t: 'Финансовое сопровождение', d: 'Контролируем исполнение контрактных обязательств и сопровождаем процесс до полного завершения сделки и получения оплаты.' },
-];
+import { useLanguage } from '../i18n/LanguageContext.jsx';
 
 export default function Process() {
+  const { t } = useLanguage();
+  const p = t.process;
   return (
     <section className="section" id="process">
       <div className="container">
         <div className="section-head">
-          <div className="eyebrow-row"><span className="eyebrow">Как мы строим мост</span></div>
-          <h2 className="h2">Четыре шага — от первого контакта до исполнения контракта</h2>
-          <p className="lead">Вы всегда понимаете, на каком этапе находится ваш проект.</p>
+          <div className="eyebrow-row"><span className="eyebrow">{p.eyebrow}</span></div>
+          <h2 className="h2">{p.heading}</h2>
+          <p className="lead">{p.lead}</p>
         </div>
         <div className="proc__grid">
-          {STEPS.map((s) => (
+          {p.steps.map((s) => (
             <div className="proc" key={s.n}>
               <span className="proc__n">{s.n}</span>
               <div className="proc__bar"></div>

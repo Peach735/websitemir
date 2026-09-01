@@ -15,23 +15,20 @@ import GeoIndustries from './components/GeoIndustries.jsx';
 import Contacts from './components/Contacts.jsx';
 import Footer from './components/Footer.jsx';
 
-const PHONE = '+375 (29) 123-45-67';
-const EMAIL = 'info@mirasa.by';
+const EMAIL = 'mirasametby@gmail.com';
 const MESSENGER = '@mirasa';
 const WECHAT = '@mirasa';
 
 export default function App() {
   return (
     <>
-      <Header phone={PHONE} />
+      <Header email={EMAIL} />
       <div className="page" data-density="comfortable" data-images="on" data-bridge="on">
         <main>
-          <Hero phone={PHONE} variant="A" />
+          <Hero variant="A" />
           <Empathy />
           <Services />
-          <CtaBand
-            title="Обсудим выход вашей продукции на рынки Беларуси и России"
-            text="Одна консультация — и вы получите профессиональную оценку возможностей, рисков и дальнейших шагов." />
+          <CtaBand />
           <Process />
           <Formats />
           <Expect />
@@ -40,7 +37,7 @@ export default function App() {
           <Values />
           <WhoNotFor />
           <GeoIndustries />
-          <Contacts phone={PHONE} email={EMAIL} messenger={MESSENGER} wechat={WECHAT} />
+          <Contacts email={EMAIL} messenger={MESSENGER} wechat={WECHAT} />
         </main>
         <Footer />
       </div>

@@ -1,19 +1,22 @@
 import React from 'react';
 import Icon from './Icon.jsx';
 import logo from '../../assets/logo.svg';
+import { useLanguage } from '../i18n/LanguageContext.jsx';
+import { LANGUAGES } from '../i18n/translations.js';
 
-// Single source of truth: desktop nav and the mobile panel render the same links.
-const NAV = [
-  { href: '#services', label: 'Услуги' },
-  { href: '#process', label: 'Процесс' },
-  { href: '#formats', label: 'Форматы' },
-  { href: '#values', label: 'Принципы' },
-  { href: '#contacts', label: 'Контакты' },
-];
-
-export default function Header({ phone }) {
+export default function Header({ email }) {
+  const { lang, setLang, t } = useLanguage();
   const [scrolled, setScrolled] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(false);
+
+  // Single source of truth: desktop nav and the mobile panel render the same links.
+  const NAV = [
+    { href: '#services', label: t.nav.services },
+    { href: '#process', label: t.nav.process },
+    { href: '#formats', label: t.nav.formats },
+    { href: '#values', label: t.nav.values },
+    { href: '#contacts', label: t.nav.contacts },
+  ];
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -42,6 +45,21 @@ export default function Header({ phone }) {
     return () => mq.removeEventListener('change', onChange);
   }, []);
 
+  const LangSwitch = ({ className }) => (
+    <div className={'lang-switch' + (className ? ' ' + className : '')} role="group" aria-label="Language">
+      {LANGUAGES.map((l) => (
+        <button
+          key={l.code}
+          type="button"
+          className={'lang-switch__btn' + (lang === l.code ? ' is-active' : '')}
+          aria-pressed={lang === l.code}
+          onClick={() => setLang(l.code)}>
+          {l.label}
+        </button>
+      ))}
+    </div>
+  );
+
   return (
     <>
     <header className={'header' + (scrolled ? ' header--scrolled' : '')}>
@@ -49,7 +67,7 @@ export default function Header({ phone }) {
         <button
           type="button"
           className="brand-lockup"
-          aria-label="МИРАСА — наверх"
+          aria-label={t.header.brandAria}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img className="brand-mark" src={logo} alt="МИРАСА" />
         </button>
@@ -59,19 +77,20 @@ export default function Header({ phone }) {
           ))}
         </nav>
         <div className="header__right">
-          <div className="header__phone">
-            <div className="k">Звоните</div>
-            <div className="v">{phone}</div>
-          </div>
+          <a className="header__phone" href={'mailto:' + email}>
+            <div className="k">{t.header.emailLabel}</div>
+            <div className="v">{email}</div>
+          </a>
+          <LangSwitch className="header__lang" />
           <a className="btn btn-primary" href="#contacts">
             <Icon name="arrow-right" />
-            <span className="btn__label">Запросить консультацию</span>
-            <span className="btn__label--short">Консультация</span>
+            <span className="btn__label">{t.header.consultation}</span>
+            <span className="btn__label--short">{t.header.consultationShort}</span>
           </a>
           <button
             type="button"
             className="header__burger"
-            aria-label={menuOpen ? 'Закрыть меню' : 'Открыть меню'}
+            aria-label={menuOpen ? t.header.closeMenu : t.header.openMenu}
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             onClick={() => setMenuOpen((v) => !v)}>
@@ -92,6 +111,7 @@ export default function Header({ phone }) {
             </a>
           ))}
         </nav>
+        <LangSwitch className="mobnav__lang" />
       </div>
     </header>
     {/* Outside <header>: its backdrop-filter would make it the containing
