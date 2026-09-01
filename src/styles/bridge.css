@@ -28,7 +28,7 @@ body {
 
 .container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
 .container--narrow { max-width: var(--container-narrow); }
-.section { padding: var(--sec-pad) 0; position: relative; overflow: hidden; }
+.section { padding: var(--sec-pad) 0; position: relative; overflow-x: clip; }
 /* Short info strips don't need the full section rhythm. */
 .section--compact { padding: calc(var(--sec-pad) * 0.5) 0; }
 
@@ -38,7 +38,7 @@ section[id] { scroll-margin-top: 90px; }
 /* The design-system type scale is desktop-first (h2 = 44px). Long Russian
    compounds ("конкурентоспособной") then set a min-content floor wider than a
    phone, so grid tracks refuse to shrink. Scale headings fluidly instead. */
-.page .h2 { font-size: clamp(26px, 5.2vw, 44px); }
+.page .h2 { font-size: clamp(26px, 5.2vw, 32px); }
 .page h1, .page .h2, .page h3, .page h4 { overflow-wrap: break-word; }
 
 /* Grid children must be allowed to shrink below their min-content width,
@@ -221,10 +221,14 @@ a { color: var(--link); text-decoration: none; }
 .hero .eyebrow { color: var(--action); }
 .hero h1 {
   margin: 4px 0 0; font-weight: 800;
-  font-size: clamp(38px, 3.1vw, 46px); line-height: 1.08; letter-spacing: -0.025em;
+  font-size: clamp(39px, 3.1vw, 46px); line-height: 1.08; letter-spacing: -0.025em;
   color: var(--navy-900); text-wrap: balance;
 }
-.hero h1 .ink { color: var(--ink-900); }
+/* Force the wrap at the clause boundary (rather than letting it negotiate via
+   font-size alone) so the headline is guaranteed 2 lines at every checkpoint
+   width while still allowed to render large enough to stay visually dominant
+   over section h2s. */
+.hero h1 .ink { color: var(--ink-900); display: block; }
 .hero__lead { margin: 26px 0 0; font-size: clamp(18px,2.1vw,21px); font-weight: 500; line-height: 1.55; color: var(--ink-700); text-wrap: pretty; }
 .hero__cta { margin-top: 36px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .hero__refrain { margin-top: 28px; display: flex; gap: 10px 18px; flex-wrap: wrap; align-items: center; }
@@ -384,7 +388,7 @@ a { color: var(--link); text-decoration: none; }
 .crow__ic { width: 42px; height: 42px; border-radius: 8px; background: var(--navy-050); display: flex; align-items: center; justify-content: center; color: var(--action); flex: 0 0 auto; }
 .crow__ic svg { width: 20px; height: 20px; }
 .crow .k { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--fg2); display: block; }
-.crow .v { font-size: 19px; font-weight: 700; color: var(--fg1); }
+.crow .v { font-size: 19px; font-weight: 700; color: var(--fg1); overflow-wrap: anywhere; }
 .crow--lead { border-color: var(--navy-800); }
 .crow--lead .crow__ic { background: var(--navy-800); color: #fff; }
 .crow--lead .v { font-size: 19px; font-weight: 800; }
