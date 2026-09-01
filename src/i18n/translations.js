@@ -17,6 +17,13 @@ const ru = {
     openMenu: 'Открыть меню',
     closeMenu: 'Закрыть меню',
   },
+  modal: {
+    heading: 'Свяжитесь с нами',
+    sub: 'Самый быстрый способ — email. Отвечаем в течение рабочего дня.',
+    emailCta: 'Написать на email',
+    altLink: 'Другие способы связи',
+    close: 'Закрыть',
+  },
   hero: {
     eyebrow: 'Представительство иностранных производителей · Беларусь и Россия',
     headline: ['Мост между вашим производством ', 'и рынками Беларуси и Росcии'],
@@ -191,6 +198,13 @@ const en = {
     consultationShort: 'Consultation',
     openMenu: 'Open menu',
     closeMenu: 'Close menu',
+  },
+  modal: {
+    heading: 'Get in touch',
+    sub: 'Email is the fastest way to reach us. We reply within one business day.',
+    emailCta: 'Email us',
+    altLink: 'Other ways to reach us',
+    close: 'Close',
   },
   hero: {
     eyebrow: 'Representation for foreign manufacturers · Belarus and Russia',

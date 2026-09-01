@@ -1,6 +1,7 @@
 import React from 'react';
 import Icon from './Icon.jsx';
 import logo from '../../assets/logo.svg';
+import ContactModal from './ContactModal.jsx';
 import { useLanguage } from '../i18n/LanguageContext.jsx';
 import { LANGUAGES } from '../i18n/translations.js';
 
@@ -8,6 +9,7 @@ export default function Header({ email }) {
   const { lang, setLang, t } = useLanguage();
   const [scrolled, setScrolled] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [modalOpen, setModalOpen] = React.useState(false);
 
   // Single source of truth: desktop nav and the mobile panel render the same links.
   const NAV = [
@@ -77,16 +79,12 @@ export default function Header({ email }) {
           ))}
         </nav>
         <div className="header__right">
-          <a className="header__phone" href={'mailto:' + email}>
-            <div className="k">{t.header.emailLabel}</div>
-            <div className="v">{email}</div>
-          </a>
           <LangSwitch className="header__lang" />
-          <a className="btn btn-primary" href="#contacts">
+          <button type="button" className="btn btn-primary" onClick={() => setModalOpen(true)}>
             <Icon name="arrow-right" />
             <span className="btn__label">{t.header.consultation}</span>
             <span className="btn__label--short">{t.header.consultationShort}</span>
-          </a>
+          </button>
           <button
             type="button"
             className="header__burger"
@@ -119,6 +117,7 @@ export default function Header({ email }) {
     {menuOpen && (
       <div className="mobnav__scrim" onClick={() => setMenuOpen(false)} aria-hidden="true" />
     )}
+    <ContactModal open={modalOpen} onClose={() => setModalOpen(false)} email={email} />
     </>
   );
 }
