@@ -424,7 +424,7 @@ to:
           </button>
 ```
 
-(`<a href="#contacts">` becomes a `<button onClick>` — same visual `btn btn-primary` class, no anchor navigation. If the mobile nav panel has its own separate CTA link with the same `header.consultation` text, apply the identical `<a> → <button onClick={() => { setModalOpen(true); setMenuOpen(false); }}>` swap there too, closing the mobile panel on open.)
+(`<a href="#contacts">` becomes a `<button onClick>` — same visual `btn btn-primary` class, no anchor navigation. Verified: this is the site's only CTA button — the mobile nav panel (`.mobnav`) has no CTA of its own, only nav links and the language switcher — so no second swap is needed.)
 
 Render the modal once, right before the closing `</>` fragment at the end of the component's returned JSX:
 ```jsx
